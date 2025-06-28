@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto_unidad_2.AgregarPage"
+             Title="AgregarPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label Text="Nombre" FontSize="16"/>
+            <Entry x:Name="nombreEntry" Placeholder="Escribe el nombre" />
+
+            <Label Text="Correo" FontSize="16"/>
+            <Entry x:Name="correoEntry" Placeholder="ejemplo@correo.com" Keyboard="Email"  />
+
+            <Label Text="Teléfono" FontSize="16"/>
+            <Entry x:Name="telefonoEntry" Placeholder="Teléfono" Keyboard="Telephone" />
+
+            <Button Text="Guardar"
+                    Clicked="OnGuardarClicked"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    CornerRadius="10"
+                    FontSize="16"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
