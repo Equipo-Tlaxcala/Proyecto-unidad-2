@@ -41,22 +41,19 @@ public partial class MainPage : ContentPage
         {
             await Navigation.PushAsync(new ActualizarPersona(persona));
         }
-    }
-
-
-    /*
-   private async void OnEliminarClicked(object sender, EventArgs e)
-   {
-       var persona = (sender as Button)?.CommandParameter as Persona;
-       if (persona != null)
-       {
-           bool confirm = await DisplayAlert("Confirmar", $"¿Eliminar a {persona.Nombre}?", "Sí", "No");
-           if (confirm)
-           {
-               await _dbService.EliminarPersonaAsync(persona.id_nombre);
-               CargarPersonas(); // Refrescar
-           }
-       }
    }
-   */
+    private async void OnEliminarClicked(object sender, EventArgs e)
+    {
+        var boton = sender as Button;
+        var persona = boton?.BindingContext as Persona;
+        if (persona != null)
+        {
+            bool confirm = await DisplayAlert("Confirmar", $"¿Eliminar a {persona.Nombre}?", "Sí", "No");
+            if (confirm)
+            {
+                await _dbService.EliminarPersonaAsync(persona.id_nombre);
+                CargarPersonas(); // Refrescar
+            }
+        }
+    }
 }
