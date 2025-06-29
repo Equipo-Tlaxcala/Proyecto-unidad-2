@@ -42,6 +42,13 @@ public partial class MainPage : ContentPage
             await Navigation.PushAsync(new ActualizarPersona(persona));
         }
    }
+
+    private void OnActualizarClicked(object sender, EventArgs e)
+    {
+      
+        CargarPersonas();
+    }
+
     private async void OnEliminarClicked(object sender, EventArgs e)
     {
         var boton = sender as Button;

@@ -5,6 +5,8 @@
     <!-- Lista de personas -->
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
+
+           
             <!-- Botón Agregar -->
             <Button Text="➕ Agregar Persona"
                 Clicked="OnAgregarClicked"
@@ -13,6 +15,16 @@
                 CornerRadius="10"
                 FontSize="16"
                 HorizontalOptions="Center" />
+
+            <Button 
+                Text="🔄 Actualizar Pantalla"
+                Clicked="OnActualizarClicked"
+                BackgroundColor="#FFA500"
+                TextColor="White"
+                 CornerRadius="10"
+                 FontSize="16"
+                 HorizontalOptions="Start"/>
+            
             <!-- Lista de personas -->
             <CollectionView x:Name="PersonasCollection" SelectionMode="None" HeightRequest="1000">
                 <CollectionView.ItemTemplate>
