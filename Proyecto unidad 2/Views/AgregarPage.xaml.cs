@@ -1,6 +1,6 @@
 using Proyecto_unidad_2.Services;
 using Proyecto_unidad_2.Models;
-namespace Proyecto_unidad_2;
+namespace Proyecto_unidad_2.Views;
 
 public partial class AgregarPage : ContentPage
 {
